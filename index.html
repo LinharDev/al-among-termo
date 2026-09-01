@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Among Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="alCorpo">
+
+  <!-- Faixa Superior (Header) -->
+  <header class="alFaixaTopo">
+    <div class="alHeaderConteudo">
+      <div class="alGrupoTopo">
+        <img src="./assets/among-12+1.png" alt="Among Us Character" class="alPersonagemRed">
+        <div class="alBoxTentativas">
+          <span class="alTextoTentativas">TENTATIVAS</span>
+          <div class="alValorTentativas">
+            <span id="alNumeroTentativa" class="alVerde">1 </span><span class="alBarra">/</span>6
+          </div>
+        </div>
+      </div>
+      <p class="alTextoInstrucao">Adivinhe a palavra secreta de 5 letras.</p>
+    </div>
+
+    <!-- Alterado de button para link 'a' -->
+    <a href="index.html" id="alBtnReset" class="alBtnReset">
+      <img src="./assets/return.png" alt="Reiniciar" class="alIconeReset">
+    </a>
+  </header>
+
+  <!-- Container Principal do Card -->
+  <main class="alContainerJogo">
+    <div class="alAreaControles">
+      <input type="text" id="alInputPalavra" class="alCampoInput" maxlength="5" placeholder="Acerte a senha" autocomplete="off">
+      <button id="alBtnEnviar" class="alBotaoEnviar">ENVIAR</button>
+    </div>
+
+    <!-- Grade dinâmica de letras -->
+    <section id="alGradeJogo" class="alGradeJogo"></section>
+  </main>
+
+  <!-- Modal de Vitória -->
+  <div id="alModalVitoria" class="alModalOverlay alModalVitoriaBg">
+    <button id="alBtnFecharVitoria" class="alBtnFecharModal"></button>
+    <div class="alModalConteudo">
+      <h1 class="alTituloVitoria">Vitória</h1>
+      <img src="./assets/among-12+1.png" alt="Vitória" class="alPersonagemModal">
+    </div>
+  </div>
+
+  <!-- Modal de Derrota -->
+  <div id="alModalDerrota" class="alModalOverlay alModalDerrotaBg">
+    <button id="alBtnFecharDerrota" class="alBtnFecharModal"></button>
+    <div class="alModalConteudo">
+      <h1 class="alTituloDerrota">Derrota</h1>
+      <img src="./assets/among-12+1.png" alt="Derrota" class="alPersonagemModal">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

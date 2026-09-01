@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body.alCorpo {
+  background-color: #0A1B2D;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- Cabeçalho / Topo --- */
+.alFaixaTopo {
+  width: 100%;
+  height: 170px;
+  background-color: #081726;
+  border-bottom: 1px solid #0e2438;
+  padding: 16px 20px 12px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.alHeaderConteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.alGrupoTopo {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.alPersonagemRed {
+  width: 100px;
+  height: auto;
+  margin-bottom: -120px;
+  margin-right: 80px;
+  padding: 30px 0px;
+}
+
+.alBoxTentativas {
+  width: 200px;
+  height: 120px;
+  background-color: #0a1c2e;
+  border: 4px solid #051222;
+  border-radius: 15px;
+  padding: 15px 20px;
+  text-align: center;
+  margin: -100px 0px -40px 0px;
+}
+
+.alTextoTentativas {
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  color: #9FB5C9;
+  display: block;
+  margin-bottom: -5px;
+}
+
+.alValorTentativas {
+  font-size: 60px;
+  font-weight: bold;
+  color: #2B4056;
+}
+
+.alVerde {
+  color: #238E4B;
+}
+
+.alBarra {
+  color: #2B4056;
+}
+
+.alTextoInstrucao {
+  font-size: 15px;
+  color: #9FB5C9;
+  padding: 0px 0px 60px 125px;
+  text-align: center;
+  margin: 42px 0px -40px 0px;
+  font-weight: 700;
+}
+
+.alBtnReset {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  background-color: #0a1c2e;
+  border: 1px solid #142e47;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none; /* Garante que o link não tenha sublinhado */
+}
+
+.alBtnReset:hover .alIconeReset {
+  content: url("./assets/return-hover.png");
+}
+
+.alIconeReset {
+  width: 36px;
+}
+
+/* --- Card Principal --- */
+.alContainerJogo {
+  margin-top: 25px;
+  background-color: #071524;
+  border: 1px solid #12283d;
+  border-radius: 12px;
+  padding: 16px;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alAreaControles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alCampoInput {
+  width: 100%;
+  height: 36px;
+  background-color: #06111F;
+  border: 3px solid #2B4056;
+  border-radius: 8px;
+  color: #5D5D5D;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.alCampoInput::placeholder {
+  color: #5D5D5D;
+  font-weight: 700;    
+  text-transform: none;
+  opacity: 1;
+}
+
+.alBotaoEnviar {
+  width: 100%;
+  height: 32px;
+  background-color: #2B4056;
+  border: 3px solid #06111F;
+  border-radius: 8px;
+  color: #06111F;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.alBotaoEnviar:hover {
+  background-color: #1e4263;
+  color: #ffffff;
+}
+
+/* --- Tabuleiro de Letras --- */
+.alGradeJogo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.alLinha {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alCelula {
+  width: 46px;
+  height: 46px;
+  background-color: #05101a;
+  border: 2px solid #2B4056;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* Cores do Tabuleiro */
+.alLetraCorreta {
+  background-color: #238C49;
+  border-color: #238C49;
+  color: #ffffff;
+}
+
+.alLetraPresente {
+  background-color: #CB9D21;
+  border-color: #CB9D21;
+  color: #ffffff;
+}
+
+.alLetraAusente {
+  background-color: #05101a;
+  border-color: #12283d;
+  color: #3b5670;
+}
+
+/* Modais */
+.alModalOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.alMostrarModal {
+  display: flex;
+}
+
+.alModalVitoriaBg {
+  background-image: url(./assets/background-victory.png);
+  background-repeat: no-repeat;
+  background-position: center 60%; 
+  background-size: cover; 
+}
+
+.alModalDerrotaBg {
+  background-image: url(./assets/background-defeat.png);
+  background-repeat: no-repeat;
+  background-position: center 60%; 
+  background-size: cover; 
+}
+
+/* Botão Fechar Modal */
+.alBtnFecharModal {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 34px;
+  height: 34px;
+  background: transparent; /* Remove a caixa e deixa o fundo invisível */
+  border: none;             /* Remove a borda do quadrado */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1010;
+  cursor: pointer;
+  background-image: url(./assets/close.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 34px;
+}
+
+.alBtnFecharModal:hover {
+  background-image: url(./assets/close-hover.png);
+  border-color: #1e4263;
+}
+
+.alModalConteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -10px;
+  transform: translateY(-50px);
+}
+
+.alTituloVitoria {
+  font-size: 80px;
+  color: #00e5ff;
+}
+
+.alTituloDerrota {
+  font-size: 80px;
+  color: #ff3333;
+}
+
+.alPersonagemModal {
+  width: 180px;
+  height: auto;
+}
+
+/* RESPONSIVO */
+
+
+@media (max-width: 580px) {
+
+    body.alCorpo {
+        min-height: 100vh;
+        padding: 0 0 20px 0;
+        overflow-x: hidden;
+    }
+
+
+
+    .alFaixaTopo {
+        width: 100%;
+        height: 125px;
+        padding: 10px 15px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .alHeaderConteudo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .alGrupoTopo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 5px;
+    }
+
+
+    .alPersonagemRed {
+        width: 70px;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .alBoxTentativas {
+        width: 150px;
+        height: 78px;
+        margin: 0;
+        padding: 7px 10px;
+        background-color: #0a1c2e;
+        border: 3px solid #051222;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .alTextoTentativas {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+        letter-spacing: 0.5px;
+    }
+
+    .alValorTentativas {
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+
+
+    .alTextoInstrucao {
+        font-size: 12px;
+        padding: 0;
+        margin: -2px 0 0 0;
+        text-align: center;
+        line-height: 16px;
+        position: relative;
+        z-index: 2;
+    }
+
+
+
+    .alBtnReset {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        background-image: none;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .alBtnReset:hover {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .alIconeReset {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+
+
+    .alContainerJogo {
+        width: 253px;
+        max-width: 253px;
+        margin-top: 18px;
+        padding: 12px;
+        border-radius: 10px;
+        gap: 10px;
+    }
+
+ 
+    .alCampoInput {
+        width: 100%;
+        height: 36px;
+        font-size: 17px;
+    }
+
+
+    .alBotaoEnviar {
+        width: 100%;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .alGradeJogo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .alLinha {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 6px;
+    }
+
+    .alCelula {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        border-radius: 7px;
+        border-width: 2px;
+        font-size: 18px;
+    }
+
+    .alModalOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .alMostrarModal {
+        display: flex;
+    }
+
+    .alModalConteudo {
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .alTituloVitoria{
+        font-size: 42px;
+        margin: 0;
+        text-align: center;
+    }
+    .alTituloDerrota {
+        font-size: 42px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .alPersonagemModal {
+        width: 130px;
+        height: auto;
+    }
+
+    .alBtnFecharModal {
+        top: 15px;
+        right: 15px;
+        width: 34px;
+        height: 34px;
+        background-size: 34px;
+    }
+}
