@@ -1,0 +1,46 @@
+# Formas de verbos irregulares (e outras palavras) de 5 letras aceitas como chute.
+# ser / estar / ter / haver / ir / vir / ver
+seria serás serão serei serem seres sejam sejas fosse fomos foram forem fores foste sendo sidos sidas somos
+estou estás estão estas estes estar
+tenho tenha temos terei terás terão terem teres teria tendo tidos tidas tinha tiver tives
+havia houve haver hajam hajas
+vamos irmos irdes iriam irias
+venho venha vinha vimos viera vindo virão viria viram vinde
+vejam vejas visse viste visto vista vendo veria verei verão verás vemos veres verem
+# fazer / dizer / trazer / pôr
+faria farei farão farás faças façam fazem fazia fazes fazer fazei feito feita fizer fizes farem fares
+diria direi dirão dirás dizem dizer dizes dizia digam digas disse disso dizei ditos ditas dissé
+trago traga trará
+ponho ponha pondo posto posta punha puser poria porei porão porás pores porem impor expor supor repor depor impôs expôs supôs repôs depôs impõe expõe supõe depõe repõe
+# poder / querer / saber / caber / valer / perder / dar / ler / crer / rir
+posso possa podem podes podia poder puder
+quero quere
+sabia sabes sabem saber soube saiba sabei
+caibo caiba cabem cabes cabia caber coube
+valho valha valem vales valia valer valeu
+perco perca perde perdi perdo
+damos dando darei darem dares daria darão darás dados dadas deram derem deres desse deste demos 
+leram lerem leres lendo lemos leria lerei lerão lerás leiam leias leiam lidos lidas
+creem creia creio criam
+rimos riram rindo riria rirei rirão riste riste
+# pedir / medir / ouvir / sentir / dormir / seguir / servir / subir / fugir / cobrir
+peçam peças pedem pedes pedia pedir pediu pedis
+meçam meças medem medes media medir mediu medis
+ouçam ouças ouvem ouves ouvia ouvir ouviu ouvis
+sinto sinta sente senti
+durmo durma dorme dormi
+sigam sigas segue segui
+sirvo sirva serve servi
+sobes sobem subam subas subia subir subiu
+foges fogem fujam fujas fugia fugir fugiu
+cubro cubra cobre cobri
+# sair / cair / trair / doer / construir
+saiam saias saiba saíam saíra sairá saído saída
+caiam caias caíam caíra cairá caído caída
+traio traia traem traiu trair traís
+doído doída
+# palavras comuns que a lista-base do OCR costuma perder
+chulé mamão limão balão manhã
+vivei ouvis pedis amais temei partí vinde fazei dizei
+# plurais de substantivos de 3 letras e outras formas comuns
+mares cores dores luzes vozes males sóis méis cães pães mãos mães chãos grãos irmãs irmãos
